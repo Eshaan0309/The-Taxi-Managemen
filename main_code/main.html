@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Management System</title>
+    <style>
+        /* CSS styles for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .booking-details {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Taxi Management System</h1>
+
+    <!-- User Registration Form -->
+    <form id="registration-form">
+        <h2>User Registration</h2>
+        <input type="text" placeholder="Enter your name" required><br>
+        <input type="text" placeholder="Enter your email" required><br>
+        <input type="password" placeholder="Enter your password" required><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- Booking a Ride Form -->
+    <form id="booking-form">
+        <h2>Book a Ride</h2>
+        <input type="text" placeholder="Pickup Location" required><br>
+        <input type="text" placeholder="Drop-off Location" required><br>
+        <select required>
+            <option value="">Select Taxi Type</option>
+            <option value="standard">Standard</option>
+            <option value="luxury">Luxury</option>
+        </select><br>
+        <input type="submit" value="Book Now">
+    </form>
+
+    <!-- Displaying Ride Details -->
+    <div class="booking-details">
+        <h2>Ride Details</h2>
+        <p>Pickup Location: <span id="pickup-location"></span></p>
+        <p>Drop-off Location: <span id="dropoff-location"></span></p>
+        <p>Taxi Type: <span id="taxi-type"></span></p>
+    </div>
+</body>
+</html>
